@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  <div>
+    <div>
+      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3">
+        {% for video in video_list %}
+         <div class="rounded overflow-hidden shadow-lg">
+            <div>
+              <img class="w-full" src="{{ video.image.url }}" alt="">
+              <div class="px-6 py-4">
+                <p > <a href="{% url 'video_hosting:video' video.id %}" class="font-bold text-xl mb-2 text-green-500">{{ video.title }}</a></p>
+                <p class="text-black text-lg">{{ video.description|slice:":100" }}</p>
+                <p class="text-gray-500 text-base">{{ video.game_day }}</p>
+              </div>
+             
+            </div>
+          </div> <!-- /.post-masonry -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

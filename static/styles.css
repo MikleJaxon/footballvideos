@@ -1,0 +1,191 @@
+
+
+/* Начальные стили */
+nav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Добавьте другие начальные стили, если нужно */
+}
+
+nav .max-w-6xl {
+    max-width: 72rem; /* 6xl в Tailwind CSS */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+nav .flex {
+    display: flex;
+}
+
+nav .justify-between {
+    justify-content: space-between;
+}
+
+nav .items-center {
+    align-items: center;
+}
+
+nav .space-x-7 > * + * {
+    margin-left: 1.75rem; /* 7 в Tailwind CSS */
+}
+
+/* Стили для логотипа */
+nav .font-semibold {
+    font-weight: 600;
+}
+
+/* Стили для ссылок */
+nav a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: #4b5563; /* text-gray-500 в Tailwind CSS */
+    font-weight: 500; /* font-semibold в Tailwind CSS */
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    border-color: #48bb78; /* border-green-500 в Tailwind CSS */
+    color: #2d3748; /* text-gray-700 в Tailwind CSS */
+}
+
+/* Стили для кнопок */
+nav button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: #4b5563; /* text-gray-500 в Tailwind CSS */
+    font-weight: 500; /* font-semibold в Tailwind CSS */
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+nav button:hover {
+    color: #2d3748; /* text-gray-700 в Tailwind CSS */
+}
+
+
+/* Стили для контейнера */
+.p-10 {
+    padding: 2.5rem; /* Размер в пикселях или других единицах измерения */
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Один столбец */
+  }
+  
+  .sm\:grid-cols-1 {
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); /* Один столбец на экранах шире 640px */
+    }
+  }
+  
+  .md\:grid-cols-3 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /* Три столбца на экранах шире 768px */
+    }
+  }
+  
+  .lg\:grid-cols-3 {
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /* Три столбца на экранах шире 1024px */
+    }
+  }
+  
+  .xl\:grid-cols-3 {
+    @media (min-width: 1280px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /* Три столбца на экранах шире 1280px */
+    }
+  }
+  
+  .gap-3 {
+    gap: 0.75rem; /* Размер в пикселях или других единицах измерения */
+  }
+  
+  /* Стили для элементов в контейнере */
+  .rounded {
+    border-radius: 0.25rem; /* Радиус скругления в пикселях или других единицах измерения */
+  }
+  
+  .overflow-hidden {
+    overflow: hidden; /* Скрытие содержимого, выходящего за границы */
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Тень */
+  }
+  
+  .w-full {
+    width: 100%; /* Ширина элемента на 100% */
+  }
+  
+  /* Стили для текста */
+  .font-bold {
+    font-weight: bold; /* Полужирный текст */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* Размер шрифта */
+    line-height: 1.75rem; /* Межстрочный интервал */
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem; /* Отступ снизу */
+  }
+  
+  .text-green-500 {
+    color: #10B981; /* Цвет текста */
+  }
+  .text-black {
+    color: #000; /* Черный цвет текста */
+  }
+  
+  .text-lg {
+    font-size: 1.125rem; /* Размер шрифта для большего текста */
+    line-height: 1.75rem; /* Межстрочный интервал для большего текста */
+  }
+  
+  .text-gray-500 {
+    color: #6B7280; /* Цвет текста */
+  }
+  
+  .text-base {
+    font-size: 1rem; /* Размер шрифта */
+    line-height: 1.5rem; /* Межстрочный интервал */
+  }
+  
+  /* Стили для изображений */
+  .px-6 {
+    padding-left: 1.5rem; /* Отступ слева */
+    padding-right: 1.5rem; /* Отступ справа */
+  }
+  
+  .py-4 {
+    padding-top: 1rem; /* Отступ сверху */
+    padding-bottom: 1rem; /* Отступ снизу */
+  }
+  /* styles.css */
+
+/* Set height to 2rem */
+.h-8 {
+  height: 2rem;
+}
+
+/* Set width to 2rem */
+.w-8 {
+  width: 2rem;
+}
+

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Список новостей</h1>
+    {% for new in News_list %}
+          <p>{{ new.titleNews }}</p>
+          <p>{{ news.textNews }}</p>
+    {% endfor %}
+{% endblock content %}

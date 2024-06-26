@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bora Sport</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+  <script src="{% static 'player.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'player.min.css' %}">
+</head>
+<body>
+
+<nav class="bg-white shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+          <div class="flex space-x-7">
+              <div>
+                  <a href="{% url 'video_hosting:home' %}" class="flex items-center px-2 py-4">
+                    <img class="h-8 w-8" src="/media/image/logo.jpg" />
+
+                      <span class="text-gray-500 text-xl font-semibold">Bora Sport</span>
+                  </a>
+              </div>
+              <div class="items-center flex space-x-1">
+                  <!-- <a href="https://vk.com/borasport" class="py-4 px-2 text-gray-500 font-semibold">БОРА СПОРТ</a> -->
+                  <a href="{% url 'video_hosting:home' %}" class="py-4 px-2 text-gray-500 font-semibold">Обзоры</a>
+                  <a href="{% url 'video_hosting:podcasts' %}" class="py-4 px-2 text-gray-500 font-semibold">Подкасты</a>
+                  <a href="#" class="py-4 px-2 text-gray-500 font-semibold">Хайлаты</a>
+                  <a href="{% url 'video_hosting:news' %}" class="py-4 px-2 text-gray-500 font-semibold">Новости</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+
+
+{% block content %}Ц
+{% endblock content %}
+<!-- FOOTER -->
+
+
+
+<script src="{% static 'player.min.js' %}"></script>
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+
+</body>
+</html>

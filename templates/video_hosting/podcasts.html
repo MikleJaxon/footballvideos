@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  <div>
+    <div>
+      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3">
+        {% for podcasts in podcasts %}
+         <div class="rounded overflow-hidden shadow-lg">
+            <div>
+              <img class="w-full" src="{{ podcasts.image_titlePodcasts.url }}" alt="">
+              <div class="px-6 py-4">
+                <p > <a href="{% url 'video_hosting:podcast_detail' podcasts.id %}" class="font-bold text-xl mb-2 text-green-500">{{ podcasts.titlePodcasts }}</a></p>
+                <p class="text-black text-lg">{{ podcasts.descriptionPodcasts|slice:":100" }}</p>
+                <p class="text-gray-500 text-base">{{ podcasts.podcastTheme }}</p>
+              </div>
+             
+            </div>
+          </div> 
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

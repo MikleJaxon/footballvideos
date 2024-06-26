@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+          <span class="date">{{ video.create_at }}</span>
+          <h4><a href="{% url 'video_hosting:video' video.id %}">{{ video.title }}</a></h4>
+          <p>{{ video.description }}</p>
+          <video
+              id="my-video"
+              class="video-js"
+              controls
+              preload="auto"
+              width="1000"
+              height="800"
+              data-setup="{}"
+          >
+            <source src="{% url 'video_hosting:stream' video.id %}" type="video/mp4"/>
+            <source src="{% url 'video_hosting:stream' video.id %}" type="video/webm"/>
+          </video>
+ 
+{% endblock content %}

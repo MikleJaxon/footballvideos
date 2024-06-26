@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h1>{{ podcast.titlePodcasts }}</h1>
+    <img src="{{ podcast.image_titlePodcasts.url }}" alt="Превью">
+    <!-- <audio controls>
+        <source src="{{ podcast.audioPocasts.url }}">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio> -->
+    
+          <audio controls>
+            <source src="{% url 'video_hosting:podcast_audio' podcast.id  %}">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+    
+    <p>{{ podcast.descriptionPodcasts }}</p>
+    <p>Тема: {{ podcast.podcastTheme }}</p>
+</div>
+
+{% endblock content %}
